@@ -1,8 +1,16 @@
 function fibonacci(num){
-    while (num >=0){
-    fibonacci(num+2)-fibonacci(num+1)
-    num--
+    if (num < 0){
+        return 'OOPS'
     }
+    let a = 1;
+    let b = 0;
+    let count = 0;
+    for (let i = 0; i < num; i++){
+        count = a + b;
+        a = b;
+        b = count;
+    } 
+    return count
 }
 
 // Do not edit below this line
